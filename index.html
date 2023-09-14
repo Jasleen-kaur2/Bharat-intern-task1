@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+
+                      
+                </ul>
+                
+            </nav>
+            <div class="header-text">
+                <p>STUDENT</p>
+                <h1>Hi, I'm <span>Jasleen kaur</span><br> from Delhi.</h1>
+            </div>
+        </div>
+    </div>
+    <!------------------about----------------------->  
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutimage.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I am Jasleen kaur and I am currently pusuing BCA 
+                        from Institute of Information Technology and Management.
+                        I had  done my 12th and 10th from S.S.Mota singh school,Janakpuri.
+                        I am a second year student who is looking for Internships
+                        to gain some hands on experience about technology.
+                        I am born and brought up in delhi.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>WEB DEVELOPMENT</span><br>-from IITM</li>
+                            <li><span>PHP</span><br>-from IITM</li>
+                            <li><span>DSA and C prog.</span><br>-from IITM</li>
+                            <li><span>DBMS</span><br>-from IITM</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span> Sep 2023</span><br>C++ intern at CODSOFT</li>
+                            <li><span>Sep 2023</span><br>Web Developer intern at BHARAT INTERN</li>
+                            <li><span>Sep 2023</span><br>Campus ambassador intern at internware</li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------Education------------------------------------------------------------>
+    <div id="education">
+        <div class="container">
+            <h1 class="subtitle">Education</h1>
+            <div class="education-list">
+                <div>
+                    <i class="fa-solid fa-school"></i>
+                    <h2>Class 10th</h2>
+                    <p>Completed my class 10th in 2020 from S.S.Mota singh school with
+                        90% aggr marks from CBSE Board.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-school"></i>
+                    <h2>Class 12th</h2>
+                    <p>Completed my class 12th in 2022 from S.S.Mota singh school with
+                        89% aggr marks from CBSE Board.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h2>BCA</h2>
+                    <p>Currently pursuing BCA from Institute of Information Technology and Management.
+                       In sem-1, I got 8.7 cgpa, and in sem-2, I got 9.03 cgpa.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------------------contact------------------------------------------------------------>
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>jasleenkaurever@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9821986979</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/jasleenkaur.24_?igshid=MzMyNGUyNmU2YQ=="><i class="fab fa-instagram"></i></i></a>
+                        <a href="https://www.linkedin.com/in/jasleen-kaur-ab4a1926a"><i class="fab fa-linkedin"></i></i></a>
+                    </div>
+                   
+                </div>
+                <div class="contact-right">
+                    <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Feedback"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
